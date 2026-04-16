@@ -59,6 +59,7 @@ PhaseDescriptionRECONAttack surface mapping, CVE identification, vector prioriti
 Phases advance automatically as evidence accumulates.
 Session Files
 FileContentssessions/<target>.txtCumulative session notes, appended each runsessions/<target>.loot.jsonStructured loot: credentials, hashes, tokens, shell access, files
+
 Project Structure
 reconllm/
 ├── recon.py         # Main entrypoint: CLI, scan orchestration, interactive loop
@@ -67,5 +68,6 @@ reconllm/
 ├── loot.py          # Structured loot tracking and persistence
 ├── notes.py         # Per-target session note persistence
 └── requirements.txt
+
 Disclaimer
 This tool is intended for authorized security testing only. You are responsible for ensuring you have explicit written permission before scanning any target. The authors accept no liability for misuse.
