@@ -1,0 +1,26 @@
+# Runtime output
+sessions/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Temp / autosave files
+*.tmp
+*.autosave.txt
+*_tmp_*
+
+# Secrets
+.env
+*.loot.json
+*.notes.txt
