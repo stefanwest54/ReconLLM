@@ -1,4 +1,5 @@
 ReconLLM
+
 LLM-assisted automated reconnaissance and penetration testing framework
 Authorized use only. Only scan systems you own or have written permission to test. Unauthorized scanning is illegal.
 ReconLLM pairs automated network scanning (ping + nmap) with a Claude-powered analyst that guides you through the full penetration testing kill chain — from initial recon through foothold, privilege escalation, and intrusion. It runs suggested commands, extracts loot automatically, and persists notes and findings across sessions.
