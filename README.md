@@ -62,11 +62,11 @@ FileContentssessions/<target>.txtCumulative session notes, appended each runsess
 
 Project Structure
 reconllm/
-├── recon.py         # Main entrypoint: CLI, scan orchestration, interactive loop
-├── analyst.py       # Claude API integration: analysis, loot extraction, streaming
-├── scanner.py       # ping and nmap wrappers, arbitrary command execution
-├── loot.py          # Structured loot tracking and persistence
-├── notes.py         # Per-target session note persistence
+├── recon.py        # Main entrypoint: CLI, scan orchestration, interactive loop
+├── analyst.py      # Claude API integration: analysis, loot extraction, streaming
+├── scanner.py      # ping and nmap wrappers, arbitrary command execution
+├── loot.py         # Structured loot tracking and persistence
+├── notes.py        # Per-target session note persistence
 └── requirements.txt
 
 Disclaimer
