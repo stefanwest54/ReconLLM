@@ -34,36 +34,27 @@ YELLOW  = "\033[33m"
 BLUE    = "\033[34m"
 MAGENTA = "\033[35m"
 CYAN    = "\033[36m"
+WHITE   = "\033[37m"
 
-def c(color: str, text: str) -> str:
-    return f"{color}{text}{RESET}"
 
-def section(title: str) -> None:
-    bar = "=" * 62
-    print(f"\n{BOLD}{BLUE}{bar}{RESET}")
-    print(f"{BOLD}{BLUE}  {title}{RESET}")
-    print(f"{BOLD}{BLUE}{bar}{RESET}\n")
+_BAR_WIDTH = 62
+_BAR_HEAVY = "=" * _BAR_WIDTH
+_BAR_LIGHT = "─" * _BAR_WIDTH
 
-def info(msg: str)  -> None: print(f"{CYAN}[*]{RESET} {msg}")
-def good(msg: str)  -> None: print(f"{GREEN}[+]{RESET} {msg}")
-def warn(msg: str)  -> None: print(f"{YELLOW}[!]{RESET} {msg}")
-def error(msg: str) -> None: print(f"{RED}[ERROR]{RESET} {msg}")
+MAX_DISPLAY_CHARS = 3000
+MAX_HTML_DISPLAY_CHARS = 500
+MAX_RESULT_CHARS = 2000
 
-BANNER = f"""{CYAN}{BOLD}
-  ██████╗ ███████╗ ██████╗ ██████╗ ███╗   ██╗
-  ██╔══██╗██╔════╝██╔════╝██╔═══██╗████╗  ██║
-  ██████╔╝█████╗  ██║     ██║   ██║██╔██╗ ██║
-  ██╔══██╗██╔══╝  ██║     ██║   ██║██║╚██╗██║
-  ██║  ██║███████╗╚██████╗╚██████╔╝██║ ╚████║
-  ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝
-  ██╗     ██╗     ███╗   ███╗{RESET}
-  {CYAN}██║     ██║     ████╗ ████║{RESET}
-  {CYAN}██║     ██║     ██╔████╔██║{RESET}
-  {CYAN}██║     ██║     ██║╚██╔╝██║{RESET}
-  {CYAN}███████╗███████╗██║ ╚═╝ ██║{RESET}
-  {CYAN}╚══════╝╚══════╝╚═╝     ╚═╝{RESET}
-{RESET}{BOLD}  LLM-Assisted Automated Reconnaissance Framework{RESET}
-{YELLOW}  Authorized use only — ensure written permission before scanning{RESET}
+BANNER = f"""{RED}{BOLD}
+  ███████╗███╗   ██╗████████╗██████╗  ██████╗ ██████╗ ██╗   ██╗
+  ██╔════╝████╗  ██║╚══██╔══╝██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
+  █████╗  ██╔██╗ ██║   ██║   ██████╔╝██║   ██║██████╔╝ ╚████╔╝
+  ██╔══╝  ██║╚██╗██║   ██║   ██╔══██╗██║   ██║██╔═══╝   ╚██╔╝
+  ███████╗██║ ╚████║   ██║   ██║  ██║╚██████╔╝██║        ██║
+  ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝        ╚═╝
+{RESET}{WHITE}{BOLD}  LLM-Assisted Automated Reconnaissance Framework{RESET}
+{WHITE}  [ ENTROPY v1.0 | Exploiting Network Targets, Recon, Ops, Payloads, Yanking ]{RESET}
+{WHITE}  Authorized use only — ensure written permission before scanning{RESET}
 """
 
 def print_scan_result(result: ScanResult) -> None:
