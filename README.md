@@ -42,6 +42,8 @@ pip install impacket
 **Anthropic API key:**
 
 ```bash
+python3 -m venv venv
+source venv/bin/activate
 export ANTHROPIC_API_KEY='sk-ant-...'
 ```
 
