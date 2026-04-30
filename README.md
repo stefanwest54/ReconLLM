@@ -48,7 +48,7 @@ export ANTHROPIC_API_KEY='sk-ant-...'
 ## Installation
 
 ```bash
-git clone https://github.com/yourname/reconllm.git
+git clone https://github.com/stefanwest54/reconllm.git
 cd reconllm
 pip install -r requirements.txt
 export ANTHROPIC_API_KEY='sk-ant-...'
